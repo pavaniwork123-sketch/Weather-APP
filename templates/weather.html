@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Weather Data
+    </title>
+</head>
+<body>
+    <table border="1"><caption><h1>Weather History</h1></caption>
+        <tr><th>No.</th>
+            <th>Name</th>
+            <th>Region</th>
+            <th>Country</th>
+            <th>Time</th>
+            <th>Temperature in Celsius</th>
+            <th>Temperature in Fahrenheit</th>
+            <th>Condition</th>
+            <th>feels Like</th>
+            <th>Rain chance</th>
+            <th>Carbon Dioxide</th>
+            <th>PM2_5</th>
+            <th>PM10</th>
+        </tr>
+        {% for w in data %}
+        <tr><td>{{ w.id }}</td><td>{{ w.name }}</td><td>{{ w.region }}</td><td>{{ w.country }}</td><td>{{ w.Time }}</td><td>{{ w.Temperature_in_Celsius }}</td><td>{{ w.Temperature_in_Fahrenheit }}</td><td>{{ w.Condition }}</td><td>{{ w.feelslike }}</td><td>{{ w.chanceofrain }}</td><td>{{ w.CO }}</td><td>{{ w.PM2_5 }}</td><td>{{ w.PM10 }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
